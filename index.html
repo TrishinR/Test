@@ -11,7 +11,23 @@
 </script> -->
 
 <body style='margin : 0px; overflow: hidden; text-align: center;'>
-  <h2>Appears</h2>
+  
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <hr>
+  <p>Appears</p>
+  <a href="help.html">Help</a>
+  <a href="faq.html">FAQ</a>
+  <a href="http://www.knowledgestream.co.za/EdgeTraining">Blog</a>
+  <a href="share.html">Share</a>
+  <hr>
+  <p>Get In Touch With Us</p>
+  <a href="#" id="myBtn">Contact Us</a>
+  </div>
+  
+  <span style="font-size:25px;cursor:pointer;color:#dedede;font-family: 'Yanone Kaffeesatz', sans-serif;" onclick="openNav()">
+  <img src="http://golf.emeralddowns.com.au/_images/menu-icon.png" alt="" height="50" width="45" style="margin-left:1%;margin-top:1%;"/></span>
+  
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false'>
     <a-assets>
       <a-asset-item id="TIEFighterObj" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.obj"></a-asset-item>
@@ -27,4 +43,71 @@
     <a-camera-static/>
     <!-- </a-marker> -->
   </a-scene>
+  
+  <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "260px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  
+  <style>
+    /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav p{
+	font-size:25px;
+  }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+  }
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  </style>
+  
 </body>
