@@ -57,3 +57,24 @@ color:white;
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+/*CONTACT PAGE STYLES*/
+.contactus h1
+{
+text-align:center;
+font-family: 'Passion One', cursive;
+}
+.contactus p
+{
+text-align:center;
+background:rgba(0,0,0,0.1);
+border-radius:10px;
+padding-top:20px;
+padding-bottom:20px;
+font-family: 'Passion One', cursive;
+font-size: 25px;
+}
+.contactbuttons
+{
+text-align:center;
+}
