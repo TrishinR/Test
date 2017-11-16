@@ -15,18 +15,21 @@
 
 <body style='margin:0px;overflow: hidden;'>
   
-  <div id="mySidenav" class="sidenav">
+  <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <center><p><img src="images/logo.png" style="width:227px;height:38px;"/></p></center>
-  <a href="help.html" target="_blank">Instructions</a>
-  <a href="faq.html" target="_blank">Troubleshooting</a>
-  <a href="blog.html" target="_blank">Blog Site</a>
-  <a href="share.html">Share App</a>
-  <a href="contact.html" target="_blank">Contact Us</a>
+    <div class="overlay-content">
+      <a href="help.html">Instructions</a>
+      <a href="faq.html">Troubleshooting</a>
+      <a href="bllog.html">Blog Site</a>
+      <a href="#">Share App</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
   </div>
   
-  <span style="font-size:25px;cursor:pointer;color:#dedede;" onclick="openNav()">
-  <img src="images/menu-icon.png" alt="" height="50" width="45"/></span>
+  <center><div id="btnMenu">
+	<span style="font-size:30px;cursor:pointer;" onclick="openNav()">
+    <img src="images/menu-icon.png" alt="" height="50" width="45"/></span>
+  </div></center>
   
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false'>
     <a-assets>
@@ -45,13 +48,13 @@
   </a-scene>
   
   <script>
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "260px";
-    }
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
 
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
   </script>
   
 </body>
