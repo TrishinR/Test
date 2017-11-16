@@ -1,1 +1,72 @@
 
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Troubleshooting</title>
+<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.FAQ 
+{
+cursor:pointer;
+background:rgba(0,0,0,0.1);
+border-radius:5px;
+padding-top:20px;
+padding-bottom:20px;
+font-size:25px;
+width:50%;
+text-align:center;
+font-family: 'Passion One', cursive;
+}
+.FAA 
+{ 
+display:none; 
+}
+h2
+{
+font-family: 'Passion One', cursive;
+font-size: 30px;
+text-align:center;
+}
+h3
+{
+font-size: 25px;
+text-align:center;
+}
+</style>
+
+<script type="text/javascript">
+function toggle(Info) {
+  var CState = document.getElementById(Info);
+  CState.style.display = (CState.style.display != 'block')
+                       ? 'block' : 'none';
+}
+</script>
+</head>
+
+<body>
+
+<h2>Experiencing Problems?</h2>
+<h3>The questions and answers below might fix your issue!</h3>
+
+<center><DIV class="FAQ" onclick="toggle('faq1')">
+ Question 1?
+ <div id="faq1" class="FAA">Answer 1</div>
+</DIV>
+<br>
+
+<DIV class="FAQ" onclick="toggle('faq2')">
+ Question 2?
+ <div id="faq2" class="FAA">Answer 2</div>
+</DIV>
+<br>
+
+<DIV class="FAQ" onclick="toggle('faq3')">
+ Question 3?
+ <div id="faq3" class="FAA">Answer 3</div>
+</DIV></center>
+<br>
+
+</body>
+</html>
