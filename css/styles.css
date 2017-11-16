@@ -24,10 +24,12 @@ color:white;
     color: #818181;
     display: block;
     transition: 0.3s
+    font-family: 'Passion One', cursive;
 }
 
 .sidenav p{
 	font-size:25px;
+	font-family: 'Passion One', cursive;
   }
 
 /* When you mouse over the navigation links, change their color */
