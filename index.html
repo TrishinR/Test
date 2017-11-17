@@ -15,21 +15,24 @@
 
 <body style='margin:0px;overflow: hidden;'>
   
-  <div id="myNav" class="overlay">
+  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-      <a href="help.html">Instructions</a>
-      <a href="faq.html">Troubleshooting</a>
-      <a href="bllog.html">Blog Site</a>
-      <a href="#">Share App</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
+  <hr>
+  <p>Training Platforms</p>
+  <a href="http://www.knowledgestream.co.za/edgetraining" target="_blank">Edge Training</a>
+  <a href="http://www.knowledgestream.co.za/NatSpur" target="_blank">Natspur</a>
+  <a href="http://www.knowledgestream.co.za/EdgeIT" target="_blank">Edge IT</a>
+  <a href="http://www.knowledgestream.co.za/propertymanagementsa" target="_blank">Property Management SA</a>
+  <a href="http://www.knowledgestream.co.za/HussarGrill" target="_blank">The Hussar Grill</a>
+  <a href="" target="_blank">Better Marks</a>
+  <a href="http://www.bitrate.co.za" target="_blank">Bitrate</a>
+  <hr>
+  <p>Get In Touch With Us</p>
+  <a href="#" id="myBtn">Contact Us</a>
   </div>
-  
-  <center><div id="btnMenu">
-	<span style="font-size:30px;cursor:pointer;" onclick="openNav()">
-    <img src="images/menu-icon.png" alt="" height="50" width="45"/></span>
-  </div></center>
+
+  <span style="font-size:25px;cursor:pointer;color:#dedede;font-family: 'Yanone Kaffeesatz', sans-serif;" onclick="openNav()">
+  <img src="images/menu-icon.png" alt="" height="50" width="45" style="margin-left:1%;margin-top:1%;"/></span>
   
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false'>
     <a-assets>
@@ -48,13 +51,13 @@
   </a-scene>
   
   <script>
-  function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-  }
+ function openNav() {
+    document.getElementById("mySidenav").style.width = "260px";
+ }
 
-  function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-  }
-  </script>
+ function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+ }
+ </script>
   
 </body>
