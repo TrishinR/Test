@@ -51,7 +51,7 @@
       <!--<a-asset-item id="TIEFighterObj" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.obj"></a-asset-item>-->
       <!--<a-asset-item id="TIEFighterMtl" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.mtl"></a-asset-item>-->
     </a-assets>
-    <!-- <a-marker type="pattern" url="https://raw.githubusercontent.com/wacraven/AR-Test/master/white-marker.patt"> -->
+    <a-marker type="pattern" url="markers/pattern-marker.patt">
       <a-anchor hit-testing-enabled='true'>
         <!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">
         </a-entity>-->
@@ -59,12 +59,8 @@
 	<!--<a-image src="images/Logo.png"></a-image>-->
       </a-anchor>
 	  
-	  <a-marker type='pattern' patternUrl='markers/pattern-marker.patt'>
-      		<a-box position='0 0.5 0' material='color: red;'></a-box>
-    	  </a-marker>
-	  
     <a-camera-static/>
-    <!-- </a-marker> -->
+    </a-marker>
   </a-scene>
   
   <script>
