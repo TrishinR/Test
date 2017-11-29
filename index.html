@@ -33,14 +33,14 @@
     <a-assets>
       <!--<a-asset-item id="TIEFighterObj" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.obj"></a-asset-item>-->
       <!--<a-asset-item id="TIEFighterMtl" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.mtl"></a-asset-item>-->
-      <video id="video" src="https://rawgit.com/SonarSystems/A-Frame-WebVR-Tutorials/master/%5B12%5D%20Video/video/Video.mp4" webkit-playsinline>
     </a-assets>
     <!-- <a-marker type="pattern" url="https://raw.githubusercontent.com/wacraven/AR-Test/master/white-marker.patt"> -->
     <a-anchor hit-testing-enabled='true'>
       <!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">-->
-        <a-video src="#video" width="16" height="9" position="-1.5 0.5 -10"></a-video>
-      <!-- <a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' rotation="0 45 45" scale="0.01 0.01 0.01"> -->
-        <!-- <a-animation attribute="rotation" to="0 360 0" dur="10000" easing='linear' repeat="indefinite"></a-animation> -->
+        <video width="100%" controls>
+          <source src="https://rawgit.com/SonarSystems/A-Frame-WebVR-Tutorials/master/%5B12%5D%20Video/video/Video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
       </a-entity>
     </a-anchor>
     <a-camera-static/>
