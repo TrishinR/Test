@@ -18,7 +18,7 @@
   
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <center><img src="images/Logo.png" alt="Appears"/>
+  <center><img src="images/Logo.png" style="width:50%;" alt="Appears"/>
   <br><br>
   <a href="help.html" target="_blank">Instructions</a>
   <a href="faq.html" target="_blank">Troubleshooting</a>
@@ -28,10 +28,7 @@
   </div>
   
   <img src="images/menu-icon.png" alt="" onclick="openNav();" style="width:30%;"/>
-  <video width="100%" controls>
-          <source src="https://rawgit.com/SonarSystems/A-Frame-WebVR-Tutorials/master/%5B12%5D%20Video/video/Video.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
+
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false'>
     <a-assets>
       <!--<a-asset-item id="TIEFighterObj" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.obj"></a-asset-item>-->
@@ -40,7 +37,6 @@
     <!-- <a-marker type="pattern" url="https://raw.githubusercontent.com/wacraven/AR-Test/master/white-marker.patt"> -->
     <a-anchor hit-testing-enabled='true'>
       <!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">-->
-        
       </a-entity>
     </a-anchor>
     <a-camera-static/>
