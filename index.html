@@ -15,7 +15,6 @@
 </script> -->
 
 <body style='margin:0px;overflow: hidden;'>
-  <button id="play-button">Play</button>
   
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -39,7 +38,7 @@
     <!-- <a-marker type="pattern" url="https://raw.githubusercontent.com/wacraven/AR-Test/master/white-marker.patt"> -->
     <a-anchor hit-testing-enabled='true'>
       <!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">-->
-        <a-video src="#video" width="16" height="9" position="0 1 -1"></a-video>
+        <a-video src="#video" width="16" height="9" position="-1.5 0.5 -10"></a-video>
       <!-- <a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' rotation="0 45 45" scale="0.01 0.01 0.01"> -->
         <!-- <a-animation attribute="rotation" to="0 360 0" dur="10000" easing='linear' repeat="indefinite"></a-animation> -->
       </a-entity>
@@ -57,35 +56,5 @@
     document.getElementById("mySidenav").style.width = "0";
  }
  </script>
-  
-  <script>
-
-// Play button, required by browsers to grab user interaction before autoplaying videos.
-document.querySelector('#play-button').addEventListener("click", function(e){
-startStuff();  // launch the first voice over
-this.style.display = 'none';
-}, false);
-
-function startStuff(){
-    var theVideo = document.querySelector('#video');
-    theVideo.play();
-}
-</script>
-  
-  <style>
-        #play-button{
-          position: fixed;
-          top: calc(50% - 1em);
-          left: calc(50% - 100px);
-          width: 200px;
-          height: 3em;
-          z-index: 10;
-          background-color: #2bb673;
-		  border: solid 1px #2bb673;
-		  border-radius:30px;
-          font-size:20px;
-          cursor:pointer;
-        }
-    </style>
   
 </body>
