@@ -70,23 +70,6 @@
     <a-camera-static/>
     </a-marker>
   </a-scene>
-
-<script>
-    const video = document.getElementById("video");
-    const constraints = {
-        advanced: [{
-            facingMode: "environment"
-        }]
-    };
-    navigator.mediaDevices
-        .getUserMedia({
-            video: constraints
-        })
-        .then((stream) => {
-            video.src = window.URL.createObjectURL(stream);
-            video.play();
-        });
-</script>
   
   <script>
  function openNav() {
