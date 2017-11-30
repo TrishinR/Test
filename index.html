@@ -91,7 +91,7 @@ function pauseVideo()
 
 // Play button, required by browsers to grab user interaction before autoplaying videos.
 document.querySelector('#play-button').addEventListener("click", function(e){
-	callMe();
+	startStuff();
 //startStuff();  // launch the first voice over
 this.style.display = 'none';
 }, false);
@@ -101,39 +101,5 @@ function startStuff(){
     theVideo.play();
 }
 </script>
-
-<script>
-        function callMe(){
-        var video = document.querySelector('video');
-        navigator.mediaDevices.enumerateDevices().
-        then(function(devices) 
-        {
-          var userMediaConstraints = {
-          audio: false,
-          video: {
-          facingMode: 'environment',
-          width: 1920, 
-          height: 1080
-        }
-        } 
-        navigator.mediaDevices.getUserMedia(userMediaConstraints)
-        .then(function success(stream) {
-        video.srcObject = stream;
-        document.body.addEventListener('click', function(){
-        video.play();
-        })
-        var interval = setInterval(function() {
-        if (!video.videoWidth)  return;
-        clearInterval(interval)
-        }, 1000/50);
-        }).catch(function(error) {
-        console.log("Can't access user media", error);
-        alert("Can't access user media :()");
-        });
-        }).catch(function(err) {
-        console.log(err.name + ": " + err.message);
-        });
-        }
-        </script>
   
 </body>
