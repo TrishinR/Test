@@ -58,7 +58,7 @@
         	<!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">
         	</a-entity>-->
         	<a-video src="#v1" width="16" height="9" autoplay="false" scale="0.09 0.09 0.09"></a-video>
-	      	<button id="play-button">Play</button>
+	      	<button id="play" onclick="callMe();">Play</button>
 		<!--<a-image src="images/Logo.png"></a-image>-->
       	</a-anchor>
 	  
@@ -100,5 +100,39 @@ function startStuff(){
     theVideo.play();
 }
 </script>
+
+<script>
+        function callMe(){
+        var video = document.querySelector('video');
+        navigator.mediaDevices.enumerateDevices().
+        then(function(devices) 
+        {
+          var userMediaConstraints = {
+          audio: false,
+          video: {
+          facingMode: 'user',
+          width: 1920, 
+          height: 1080
+        }
+        } 
+        navigator.mediaDevices.getUserMedia(userMediaConstraints)
+        .then(function success(stream) {
+        video.srcObject = stream;
+        document.body.addEventListener('click', function(){
+        video.play();
+        })
+        var interval = setInterval(function() {
+        if (!video.videoWidth)  return;
+        clearInterval(interval)
+        }, 1000/50);
+        }).catch(function(error) {
+        console.log("Can't access user media", error);
+        alert("Can't access user media :()");
+        });
+        }).catch(function(err) {
+        console.log(err.name + ": " + err.message);
+        });
+        }
+        </script>
   
 </body>
