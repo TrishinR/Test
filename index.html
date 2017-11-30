@@ -58,7 +58,7 @@
         	<!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">
         	</a-entity>-->
         	<a-video src="#v1" width="16" height="9" autoplay="false" scale="0.09 0.09 0.09"></a-video>
-	      	<button id="play" onclick="callMe();">Play</button>
+	      	<button id="play-button">Play</button>
 		<!--<a-image src="images/Logo.png"></a-image>-->
       	</a-anchor>
 	  
@@ -91,7 +91,8 @@ function pauseVideo()
 
 // Play button, required by browsers to grab user interaction before autoplaying videos.
 document.querySelector('#play-button').addEventListener("click", function(e){
-startStuff();  // launch the first voice over
+	callMe();
+//startStuff();  // launch the first voice over
 this.style.display = 'none';
 }, false);
 
