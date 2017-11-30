@@ -1,0 +1,111 @@
+<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/wacraven/AR-Test/master/aframe-ar.js"></script>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- <script>
+  setInterval(()=> logger(), 100)
+  var logger = () => {
+    if (document.querySelector("a-marker").object3D.visible == true) {
+    console.log('MARKER VISIBLE');
+    }
+  }
+</script> -->
+
+<body style='margin:0px;overflow: hidden;' onload="pauseVideo()">
+  <style>
+        #play-button{
+          position: fixed;
+          top: calc(50% - 1em);
+          left: calc(50% - 100px);
+          width: 200px;
+          height: 3em;
+          z-index: 10;
+          background-color: #2bb673;
+		  border: solid 1px #2bb673;
+		  border-radius:30px;
+          font-size:20px;
+          cursor:pointer;
+        }
+    </style>
+  
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <center><img src="images/Logo.png" style="width:60%;" alt="Appears"/>
+  <br><br>
+  <a href="360image.html" target="_blank">360 Images</a>
+  <a href="360video.html" target="_blank">360 Videos</a>
+  <a href="help.html" target="_blank">Instructions</a>
+  <a href="faq.html" target="_blank">Troubleshooting</a>
+  <a href="blog.html" target="_blank">Blog Site</a>
+  <a href="" target="_blank">Share App</a>
+  <a href="contact.html" target="_blank">Contact Us</a></center>
+  </div>
+  
+  <img src="images/menu-icon.png" alt="" onclick="openNav();" style="width:30%;"/>
+
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false'>
+    <a-assets>
+      <video id="v1" src="https://rawgit.com/TrishinR/Test/master/RAMPAGE%20-%20OFFICIAL%20TRAILER%201%20%5BHD%5D.mp4" webkit-playsinline></video>
+      <!--<a-asset-item id="TIEFighterObj" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.obj"></a-asset-item>-->
+      <!--<a-asset-item id="TIEFighterMtl" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.mtl"></a-asset-item>-->
+    </a-assets>
+	  
+	  <!-- handle hiro marker -->
+      	<a-anchor hit-testing-enabled='true'>
+        	<!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">
+        	</a-entity>-->
+        	<a-video src="#v1" width="16" height="9" autoplay="false" scale="0.09 0.09 0.09"></a-video>
+	      	<button id="play-button">Play</button>
+		<!--<a-image src="images/Logo.png"></a-image>-->
+      	</a-anchor>
+	  
+	  <!-- handle kanji marker -->
+	<a-marker preset='kanji'>
+		<a-image src="images/Logo.png"></a-image>
+	</a-marker>
+	  
+    <a-camera-static/>
+    </a-marker>
+  </a-scene>
+  
+  <script>
+ function openNav() {
+    document.getElementById("mySidenav").style.width = "260px";
+ }
+ function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+ }
+ </script>
+  
+  
+  <script>
+function pauseVideo()
+{
+	var theVideo = document.querySelector('#v1');
+    theVideo.pause();
+}
+// Play button, required by browsers to grab user interaction before autoplaying videos.
+document.querySelector('#play-button').addEventListener("click", function(e){
+startStuff();  // launch the first voice over
+this.style.display = 'none';
+}, false);
+function startStuff(){
+    var theVideo = document.querySelector('#v1');
+    theVideo.play();
+}
+</script>
+
+<script>
+var constraints = { video: { 
+                   facingMode: "environment"  
+                   mandatory: {
+                                        maxWidth: _this.parameters.sourceWidth,
+		                       maxHeight: _this.parameters.sourceHeight
+		    		}
+};
+</script>
+  
+</body>
