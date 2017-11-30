@@ -51,6 +51,8 @@
       <!--<a-asset-item id="TIEFighterObj" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.obj"></a-asset-item>-->
       <!--<a-asset-item id="TIEFighterMtl" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.mtl"></a-asset-item>-->
     </a-assets>
+	  
+	  <!-- handle hiro marker -->
       <a-anchor hit-testing-enabled='true'>
         <!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">
         </a-entity>-->
@@ -59,13 +61,9 @@
       </a-anchor>
 	  
 	  <!-- handle kanji marker -->
-		<a-marker preset='kanji'>
-			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
-				<a-torus-knot radius='0.26' radius-tubular='0.05'>
-					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-torus-knot>
-			</a-box>
-		</a-marker>
+	<a-marker preset='kanji'>
+		<a-image src="images/Logo.png"></a-image>
+	</a-marker>
 	  
     <a-camera-static/>
     </a-marker>
