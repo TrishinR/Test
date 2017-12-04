@@ -1,0 +1,27 @@
+<head>
+  <title>My A-Frame Scene</title>
+  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+</head>
+
+ <body>
+    <a-scene>
+      <a-assets>
+        <video id="video_1" src="https://rawgit.com/TrishinR/Test/master/RAMPAGE%20-%20OFFICIAL%20TRAILER%201%20%5BHD%5D.mp4"></video>
+      </a-assets>
+
+      <a-camera position="0 0 5">
+          <a-cursor id="cursor" color="yellow"></a-cursor>
+      </a-camera>
+
+      <a-video src="#video_1" width="16" height="9" autoplay="false" scale="0.3 0.3 0.3" position="0 -0.8 0" href="https://www.google.co.za"></a-video>
+
+      <a-entity video-controls="src:#video_1" scale="3 3 3"></a-entity>
+
+    </a-scene>
+    
+    <script>
+    var theVideo = document.querySelector('#video_1');
+    theVideo.pause();
+    </script>
+ </body>
