@@ -3,7 +3,6 @@
 <script>
 //Test browser support
 const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
-  var check = false;
 
 if (SUPPORTS_MEDIA_DEVICES) {
   //Get the environment camera (usually the second one)
@@ -36,18 +35,10 @@ if (SUPPORTS_MEDIA_DEVICES) {
         //let there be light!
         const btn = document.querySelector('.switch');
         btn.addEventListener('click', function(){
-          if(check==false)
-          {
           track.applyConstraints({
             advanced: [{torch: true}]
             check==true;
           });
-          }
-          else if (check==true)
-          {
-            track.applyConstraints({
-            advanced: [{torch: false}]
-          }
         });
       });
     });
