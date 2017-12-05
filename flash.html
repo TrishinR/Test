@@ -1,5 +1,5 @@
 <button class="switch">On</button>
-<button class="switchoff">Off</button>
+var check = false;
 <script>
 //Test browser support
 const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
@@ -35,9 +35,17 @@ if (SUPPORTS_MEDIA_DEVICES) {
         //let there be light!
         const btn = document.querySelector('.switch');
         btn.addEventListener('click', function(){
+          if(check==false)
+          {
           track.applyConstraints({
             advanced: [{torch: true}]
           });
+          }
+          else if (check==false)
+          {
+            track.applyConstraints({
+            advanced: [{torch: false}]
+          }
         });
       });
     });
