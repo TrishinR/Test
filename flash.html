@@ -1,4 +1,5 @@
 <button class="switch">On</button>
+<button class="switchoff">Off</button>
 <script>
 //Test browser support
 const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
@@ -36,6 +37,13 @@ if (SUPPORTS_MEDIA_DEVICES) {
         btn.addEventListener('click', function(){
           track.applyConstraints({
             advanced: [{torch: true}]
+          });
+          
+          //let there be no light!
+        const btn = document.querySelector('.switchoff');
+        btn.addEventListener('click', function(){
+          track.applyConstraints({
+            advanced: [{torch: false}]
           });
         });
       });
