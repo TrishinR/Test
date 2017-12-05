@@ -36,6 +36,10 @@
   </div>
   
   <img src="images/menu-icon.png" alt="" onclick="openNav();" style="width:30%;"/>
+	
+	<div id="play-button">
+		<img src="images/play.png" alt="" style="height:50px; width:50px;"/>
+	</div>
 
   <a-scene embedded arjs='sourceType: webcam; webcamDirection: back; debugUIEnabled: false'>
     <a-assets>
@@ -50,11 +54,6 @@
         	</a-entity>-->
         	<a-video src="#v1" width="16" height="9" autoplay="false" scale="0.09 0.09 0.09" position="0 0 0"></a-video>
 	      	<!--<button id="play-button">Play</button>-->
-		
-		<div id="play-button">
-		<img src="images/play.png" alt="" style="height:50px; width:50px;"/>
-		</div>
-		
       	</a-anchor>
 	  
 	  <!-- handle kanji marker -->
