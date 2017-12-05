@@ -38,13 +38,6 @@ if (SUPPORTS_MEDIA_DEVICES) {
           track.applyConstraints({
             advanced: [{torch: true}]
           });
-          
-          //let there be no light!
-        const btn2 = document.querySelector('.switchoff');
-        btn2.addEventListener('click', function(){
-          track.applyConstraints({
-            advanced: [{torch: false}]
-          });
         });
       });
     });
