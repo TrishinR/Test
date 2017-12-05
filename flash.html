@@ -39,9 +39,10 @@ if (SUPPORTS_MEDIA_DEVICES) {
           {
           track.applyConstraints({
             advanced: [{torch: true}]
+            check==true;
           });
           }
-          else if (check==false)
+          else if (check==true)
           {
             track.applyConstraints({
             advanced: [{torch: false}]
