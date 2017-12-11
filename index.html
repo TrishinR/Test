@@ -9,9 +9,14 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <body style='margin:0px;overflow: hidden;' onload="pauseVideo()">
-  <style>  
-	 #controls{
+  <style>
+	  .parent
+	  {
+	  position: relative;
+	  }
+	 .parent #controls{
           position: fixed;
+	  bottom:0;
           top: calc(50% - 1em);
           left: calc(50% - 100px);
           height: 3em;
@@ -32,10 +37,11 @@
   </div>
   
   <img src="images/menu-icon.png" alt="" onclick="openNav();" style="width:30%;"/>
-	
+  	<div class="parent">
 	<div id="controls">
 		<img src="images/play.png" id="play-button" alt="" style="height:100px; width:100px;"/>
 		<img src="images/pause.png" alt="" style="height:100px; width:100px;"/>
+	</div>
 	</div>
 
   <a-scene embedded arjs='sourceType: webcam; webcamDirection: back; debugUIEnabled: false'>
