@@ -59,9 +59,13 @@
   </a-scene>
   
   <script>
+	  if(document.querySelector("a-video").object3D.visible == true)
+	  {
+		document.querySelector("#controls").style.display = 'block';	  
+	  }
 function pauseVideo()
 {
-	var theVideo = document.querySelector('#v1');
+    var theVideo = document.querySelector('#v1');
     theVideo.pause();
 }
 
