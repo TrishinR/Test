@@ -10,14 +10,7 @@
 
 <body style='margin:0px;overflow: hidden;' onload="pauseVideo()">
   <style>
-	  .parent
-	  {
-	  position: relative;
-	  margin: 0 auto;
-	  }
-	 .parent #controls{
-          position: fixed;
-	  bottom:0;
+	 #controls{
 	  z-index:2;
         }
     </style>
@@ -35,12 +28,11 @@
   </div>
   
   <img src="images/menu-icon.png" alt="" onclick="openNav();" style="width:30%;"/>
-  	<div class="parent">
-	<div id="controls">
+	
+	<center><div id="controls">
 		<img src="images/play.png" id="play-button" alt="" style="height:100px; width:100px;"/>
 		<img src="images/pause.png" alt="" style="height:100px; width:100px;"/>
-	</div>
-	</div>
+		</div></center>
 
   <a-scene embedded arjs='sourceType: webcam; webcamDirection: back; debugUIEnabled: false'>
     <a-assets>
