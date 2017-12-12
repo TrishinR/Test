@@ -2,6 +2,7 @@
 <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/wacraven/AR-Test/master/aframe-ar.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/player.js"></script>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -62,29 +63,6 @@
 function displayControls()
 {
     document.querySelector("#controls").style.display = 'block';	  
-}
-function pauseVideo()
-{
-    var theVideo = document.querySelector('#v1');
-    theVideo.pause();
-}
-
-// Play button, required by browsers to grab user interaction before autoplaying videos.
-document.querySelector('#play-button').addEventListener("click", function(e){
-	startStuff();
-//this.style.display = 'none';
-}, false);
-	  
-// Pause video button.
-document.querySelector('#pause-button').addEventListener("click", function(e){
-	pauseVideo();
-//this.style.display = 'none';
-}, false);
-
-function startStuff(){
-    var theVideo = document.querySelector('#v1');
-	theVideo.setAttribute("playsinline", true);
-    theVideo.play();
 }
 </script>
   
