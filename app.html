@@ -37,7 +37,6 @@
 	<center><div id="controls">
 		<img src="images/play.png" id="play-button" alt="" style="height:100px; width:100px;"/>
 		<img src="images/pause.png" alt="" style="height:100px; width:100px;"/>
-		<button id="goFS">Go fullscreen</button>
 		</div></center>
 
   <a-scene embedded arjs='sourceType: webcam; webcamDirection: back; debugUIEnabled: false' vr-mode-ui="enabled: false">
@@ -71,12 +70,5 @@
     <a-camera-static/>
     </a-marker>
   </a-scene>
-
-<script>
-  var goFS = document.getElementById("goFS");
-  goFS.addEventListener("click", function() {
-      document.body.requestFullscreen();
-  }, false);
-</script>
   
 </body>
