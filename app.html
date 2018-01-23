@@ -37,7 +37,6 @@
 	<center><div id="controls">
 		<img src="images/play.png" id="play-button" alt="" style="height:100px; width:100px;"/>
 		<img src="images/pause.png" alt="" style="height:100px; width:100px;"/>
-		<button id="fs-doc-button">Go Fullscreen</button>
 		<button id="fs-exit-doc-button">Exit Fullscreen</button>
 	</div></center>
 
@@ -105,10 +104,7 @@ var exitFullscreen = function () {
 var fsDocButton = document.getElementById('fs-doc-button');
 var fsExitDocButton = document.getElementById('fs-exit-doc-button');
 
-fsDocButton.addEventListener('click', function(e) {
-	e.preventDefault();
-	requestFullscreen(document.documentElement);
-});
+requestFullscreen(document.documentElement);
 
 fsExitDocButton.addEventListener('click', function(e) {
 	e.preventDefault();
