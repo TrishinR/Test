@@ -35,13 +35,15 @@
       <video id="v1" playsinline src="https://rawgit.com/TrishinR/Test/master/videos/wendy1.mp4"></video>
       <!--<a-asset-item id="TIEFighterObj" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.obj"></a-asset-item>-->
       <!--<a-asset-item id="TIEFighterMtl" src="https://raw.githubusercontent.com/wacraven/AR-Test/master/TIEFighter/TIE-fighter.mtl"></a-asset-item>-->
+	  <a-asset-item id="TIEFighterMtl" src="models/one.obj"></a-asset-item>
+	  <a-asset-item id="TIEFighterMtl" src="models/one.mtl"></a-asset-item>
     </a-assets>
 	  
 	  <!-- handle hiro marker -->
       	<a-anchor hit-testing-enabled='true'>
-        	<!--<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">
-        	</a-entity>-->
-        	<a-video src="#v1" width="16" height="9" autoplay="false" scale="0.09 0.09 0.09" position="0 0 0"></a-video>
+        	<a-entity obj-model="obj: #TIEFighterObj; mtl: #TIEFighterMtl" position='-1.5 0.5 2.75' scale="0.01 0.01 0.01">
+        	</a-entity>
+        	<!--<a-video src="#v1" width="16" height="9" autoplay="false" scale="0.09 0.09 0.09" position="0 0 0"></a-video>-->
       	</a-anchor>
 	  
 	  <!-- handle kanji marker -->
